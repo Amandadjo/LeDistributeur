@@ -1,0 +1,389 @@
+
+.card {
+    border: none !important;
+  }
+
+  /* css images */
+  
+  .thumbnail_images ul{
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .thumbnail_images ul li {
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #eee;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .thumbnail_images ul li:hover {
+    border: 2px solid #000;
+  }
+  
+  #largeImg{
+    width:500px;
+  }
+  
+  #largeImgPanel {
+      text-align: center;
+      display: none;
+      position: fixed;
+      z-index: 100;
+      top: 0; left: 0; width: 100%;       height: 100%;
+      background-color: rgba(30,30,30, 0.8);
+  }  
+  
+  .main_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+    /* css pourcentage titre */
+    .d-flex .mt-3 span {
+        color: red;
+        font-size: 20px;
+      }
+  
+      /* css like */
+
+  .heart{
+    height: 29px;
+    width: 29px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heart a{
+    text-decoration: none;
+    color: #CFD8DC;
+    font-size: 20px;
+  }
+  
+  .heart a:hover{
+    color: red;
+  }
+
+  /* css star évaluation en dessous du titre */
+  
+  .star-active {
+      color: #FBC02D;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  
+  .star-active:hover {
+      color: #F9A825;
+      cursor: pointer;
+  }
+  
+  .star-inactive {
+      color: #CFD8DC;
+  }
+  
+  .star-inactive:hover {
+      color: #F9A825;
+      cursor: pointer;
+  }
+  
+  .ratings .d-flex {
+    color: #929292;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  
+  
+  .colors ul{
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+  }
+  
+  .colors ul li{
+    height: 20px;
+    width: 20px;
+    display: flex;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .right-side{
+    position: relative;
+  }
+  
+  .mb-4 p {
+    margin-bottom: 5px;
+  }
+  
+  .buttons .btn{
+    height: 50px;
+    width: 200px;
+    border-radius: 0px !important;
+    background-color: #D0AAF3;
+    color: white;
+    border-radius: 3px !important;
+    border: none;
+  }
+  
+  .buttons .btn:hover {
+    background-color: #BA98D9;
+    color: #fff;
+  }
+  
+  label.radio {
+    cursor: pointer;
+  }
+  
+  label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  label.radio span{
+    padding: 2px 9px;
+    margin-right: 10px;
+    border: 2px solid #929292;
+    display: inline-block;
+    color: #212529;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+  
+  label.radio input:checked+span {
+    border-color: #D0AAF3;
+    background-color: #D0AAF3;
+    color: #fff;
+  }
+  
+  .price span{
+    color: red;
+    font-weight: 600;
+    font-size: 25px;
+  }
+  
+  .price sup strike {
+    color: #212529;
+  }
+  
+  .container .hr {
+    color: #929292;
+  }
+  
+  /* card plus de produit */
+  
+  .percent{
+      width: 63px;
+      height: 30px;
+      position: absolute;
+      background: red;
+      color: #fff;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 10;
+      border-bottom-left-radius: 15px;
+      padding: 10px;
+     }
+  
+  .card {
+    margin-top: 75px;
+  }
+  
+  .card-image{
+    height: 210px ! important;
+  }
+  
+  .card-inner{
+    padding: 20px;  
+  }
+  
+  .card-inner a {
+    text-decoration: none;
+    color: #212529;
+  }
+  
+  .card-inner a:hover {
+    color: #0066CC;
+  }
+  
+  .card-inner .mb-0 {
+    color: #0066CC;
+  }
+  
+  .price-2 span{
+    color: red;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .price sup strike {
+    color: #929292;
+  }
+  
+  .percent {
+    border-bottom-left-radius: 3px !important;
+  }
+  
+  .price-2 sup{
+    color: #929292;
+    font-weight: 600;
+    font-size: 14px;
+    top: -3px;
+  }
+  
+  .details{
+    border-radius: 20px;
+    width: 110px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hr-2 {
+    width: 230px;
+  }
+  
+  /* css avis client */
+  
+  a {
+      text-decoration: none !important;
+      color: inherit;
+  }
+  
+  a:hover {
+      color: #455A64;
+  }
+  
+  .container-fluid .card {
+      border-radius: 5px;
+      background-color: #fff;
+      padding-left: 60px;
+      padding-right: 60px;
+      margin-top: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+  
+  .rating-box {
+      width: 130px;
+      height: 130px;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: #FBC02D;
+      color: #fff;
+  }
+  
+  .rating-label {
+      font-weight: bold;
+  }
+  
+  /* Rating bar width */
+  .rating-bar {
+      width: 300px;
+      padding: 8px;
+      border-radius: 5px;
+  }
+  
+  /* The bar container */
+  .bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  
+  /* Individual bars */
+  .bar-5 {
+      width: 0%;
+      height: 13px;
+      background-color: #FBC02D; 
+      border-radius: 20px;
+  
+  }
+  
+  .bar-4 {
+      width: 80%;
+      height: 13px;
+      background-color: #FBC02D; 
+      border-radius: 20px;
+  }
+  
+  .bar-3 {
+      width: 0%;
+      height: 13px;
+      background-color: #FBC02D; 
+      border-radius: 20px;
+  
+  }
+  
+  .bar-2 {
+      width: 0%;
+      height: 13px;
+      background-color: #FBC02D; 
+      border-radius: 20px;
+  
+  }
+  .bar-1 {
+      width: 0%;
+      height: 13px;
+      background-color: #FBC02D; 
+      border-radius: 20px;
+  
+  }
+  
+  td {
+      padding-bottom: 10px;
+  }
+  
+  .blue-text {
+      color: #0091EA;
+  }
+  
+  .content {
+      font-size: 18px;
+  }
+  
+  .profile-pic {
+      width: 90px;
+      height: 90px;
+      border-radius: 100%;
+      margin-right: 30px;
+  }
+   
+  .pic {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+  }
+  
+  .pic:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(7.5); 
+  }
+  
+  .vote {
+      cursor: pointer;
+  }
+  
+  

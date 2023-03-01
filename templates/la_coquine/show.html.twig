@@ -1,0 +1,393 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Detail{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/stylesdetailcard.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5 mb-5">	
+  <div class="card">	
+    <div class="row g-0">	
+      <div class="col-md-6 border-end">	
+        <div class="d-flex flex-column justify-content-center">	
+          <div class="main_image">
+            <div id="largeImgPanel" onclick="this.style.display='none'">
+              <img id="largeImg">
+            </div>
+            <img src="{{asset(product.photo)}}" id="main_product_image" class="menuimg"  width="350" onclick="showImage(this.src, 'https://ledistributeur.market/wp-content/uploads/2022/06/che-6.png');">	
+          </div>	
+          <div class="thumbnail_images">	
+            <ul id="thumbnail">	
+              <li><img onclick="changeImage(this)" src="{{asset(product.photo)}}" width="70"></li>	
+              {# <li><img onclick="changeImage(this)" src="{{asset(product.photoDetail)}}" width="70"></li>	 #}
+            </ul>	
+          </div>	
+        </div>	
+      </div>	
+      <div class="col-md-6">	
+        <div class="p-3 right-side">	
+          <div class="d-flex justify-content-between align-items-center">	
+            <h3 class="mt-3">{{ product.titreArticle }}<span> ({{ product.discount }})</span></h3>	
+            <span class="heart">
+              <a href=""><i class="bi bi-heart-fill"></i></a>
+            </span>	
+          </div>
+          
+          <div class="ratings d-flex flex-row align-items-center">	
+            <div class="d-flex flex-row">	
+              <i class="bi bi-star-fill star-inactive"></i>
+              <i class="bi bi-star-fill star-inactive"></i>
+              <i class="bi bi-star-fill star-inactive"></i>
+              <i class="bi bi-star-fill star-inactive"></i>
+              <i class="bi bi-star-fill star-inactive"></i>
+            </div>	
+            <span class="">{{ product.evaluation}} évaluations</span>	
+          </div>	
+          
+          <div class="mt-4 mb-5">	
+          <h5>Vendu par <a href="">{{ product.nomBoutique }}</a></h5>	
+          </div>
+          <div class="mb-4 ">	
+          <PRE style="font-size:20px;">{{ product.descriptionCourte}}</PRE>
+          </div>	
+          <div class="sizes mt-5 mb-4">
+             <h6 class="text-uppercase">Taille:</h6> 
+            <label class="radio"> 
+              <input type="radio" name="size" value="38" checked>              
+              <span>{{ product.taille1}}</span> 
+            </label> 
+            <label class="radio"> 
+              <input type="radio" name="size" value="39"> 
+              <span>{{ product.taille2}}</span> 
+            </label> 
+            <label class="radio"> 
+              <input type="radio" name="size" value="40"> 
+              <span>{{ product.taille3}}</span> 
+            </label> 
+          </div>
+          <div class="price">
+          <span>{{ product.prix}}</span>	
+          <sup><strike>{{ product.prixBefore}}</strike></sup>
+          </div>
+          <div class="buttons d-flex flex-row mt-4 gap-3">	
+            <button class="btn">Ajouter au panier</button>	
+          </div>	
+     
+        </div>	
+      </div>	
+    </div>	
+  </div>   
+  
+  <!--  section description détaillé  -->
+  
+  <div class="mt-5">
+    <h2>Description du produit</h2>
+  </div> 
+  
+  <div class="hr mb-2">
+  <hr>
+  </div> 
+    
+<!--  section plus de produits  -->
+  
+  <div class="mt-5">
+    <h2>Plus de produits</h2>
+  </div> 
+  
+  <div class="hr mb-2">
+  <hr>
+  </div> 
+
+ <div class=" d-flex flex-row align-items-center">	
+   <div class="card">
+    <span class="percent">-38%</span> 
+      <div class="card-image">
+        <img src="https://ledistributeur.market/wp-content/uploads/2022/06/che-6-1024x1024.png" width="250"> 
+       </div>  
+     
+       <div class="card-inner">
+          <a href=""><span>ATTITUDE MAN STORE</span></a>
+          
+         <div class="hr-2">
+           <hr>
+          </div>
+         
+          <h6 class="mb-0">Chemise ciel cintrée café coton</h6> 
+
+      <div class="mt-3 d-flex justify-content-between align-items-center">
+
+      <div class="price-2">
+          <span>40.000 CFA</span>
+          <sup><strike>65.000 CFA</strike></sup>
+      </div>
+                           
+      </div>
+      </div>                    
+   </div>
+   
+<!-- second produits  -->
+   
+   <div class="card">
+    <span class="percent">-10%</span> 
+      <div class="card-image">
+        <img src="https://ledistributeur.market/wp-content/uploads/2022/06/daz-1.png" width="250"> 
+       </div>  
+     
+       <div class="card-inner">
+          <a href=""><span>La Coquine</span></a>
+          
+         <div class="hr-2">
+           <hr>
+          </div>
+         
+          <h6 class="mb-0">Mocassin à gland en cuir noir Rudy’s</h6> 
+
+      <div class="mt-3 d-flex justify-content-between align-items-center">
+
+      <div class="price-2">
+          <span>108.000 CFA</span>
+          <sup><strike>120.000 CFA</strike></sup>
+      </div>
+                           
+      </div>
+      </div>                    
+   </div>
+   
+<!-- troisième produits  -->
+   
+   <div class="card">
+    <span class="percent">-10%</span> 
+      <div class="card-image">
+        <img src="https://ledistributeur.market/wp-content/uploads/2022/06/daz-2.png" width="250"> 
+       </div>  
+     
+       <div class="card-inner">
+          <a href=""><span>ATTITUDE MAN STORE</span></a>
+          
+         <div class="hr-2">
+           <hr>
+          </div>
+         
+          <h6 class="mb-0">Richelieu en cuir</h6> 
+
+      <div class="mt-3 d-flex justify-content-between align-items-center">
+
+      <div class="price-2">
+          <span>135.000 CFA</span>
+          <sup><strike>150.000 CFA</strike></sup>
+      </div>
+                           
+      </div>
+      </div>                    
+   </div>
+   
+<!-- quatrième produits  -->
+   
+   <div class="card">
+    <span class="percent">-10%</span> 
+      <div class="card-image">
+        <img src="https://ledistributeur.market/wp-content/uploads/2022/06/ch-2.png" width="250"> 
+       </div>  
+     
+       <div class="card-inner">
+          <a href=""><span>ATTITUDE MAN STORE</span></a>
+          
+         <div class="hr-2">
+           <hr>
+          </div>
+         
+          <h6 class="mb-0">Chemise blanche à rayures rouge</h6> 
+
+      <div class="mt-3 d-flex justify-content-between align-items-center">
+
+      <div class="price-2">
+          <span>36.000 CFA</span>
+          <sup><strike>40.000 CFA</strike></sup>
+      </div>
+                           
+      </div>
+      </div>                    
+   </div>
+   
+<!-- cinquième produits  -->
+   
+   <div class="card">
+    <span class="percent">-10%</span> 
+      <div class="card-image">
+        <img src="https://ledistributeur.market/wp-content/uploads/2022/06/che-3.png" width="250"> 
+       </div>  
+     
+       <div class="card-inner">
+          <a href=""><span>ATTITUDE MAN STORE</span></a>
+          
+         <div class="hr-2">
+           <hr>
+          </div>
+         
+          <h6 class="mb-0">Chemise à Fineh</h6> 
+
+      <div class="mt-3 d-flex justify-content-between align-items-center">
+
+      <div class="price-2">
+          <span>36.000 CFA</span>
+          <sup><strike>40.000 CFA</strike></sup>
+      </div>
+                           
+      </div>
+      </div>                    
+   </div>
+   
+</div>
+<!-- section info boutiques  -->
+
+<div class="mt-5">
+    <h2>Infos vendeur</h2>
+  </div> 
+  
+  <div class="hr">
+  <hr>
+  </div> 
+  
+  <div class="info-brand">
+    <p><b>Nom de la boutique:</b> Attitude Man Store</p>
+    <p><b>Vendeur:</b> <a href="">Attitude Man Store<a></p>
+    <p><b>Info vendeur:</b> <a href=""><a></p>
+    <p>Aucune évaluation pour l'instant !</p>
+  </div>
+  
+<!--  section avis clients  -->
+      
+      <div class="mt-5">
+    <h2>Avis client</h2>
+  </div> 
+  
+  <div class="hr">
+  <hr>
+  </div> 
+    
+    <div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-xl-7 col-lg-8 col-md-10 col-12 text-center mb-5">
+			<div class="card">
+				<div class="row justify-content-left d-flex">
+					<div class="col-md-4 d-flex flex-column">
+						<div class="rating-box">
+							<h1 class="pt-4">{{ product.note}}</h1>
+							<p class="">sur 5</p>
+						</div>
+						<div>
+							<span class="bi bi-star-fill star-active mx-1"></span>
+							<span class="bi bi-star-fill star-active mx-1"></span>
+							<span class="bi bi-star-fill star-active mx-1"></span>
+              <span class="bi bi-star-fill star-active mx-1"></span>
+							<span class="bi bi-star-fill star-inactive mx-1"></span>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="rating-bar0 justify-content-center">
+							<table class="text-left mx-auto">
+								<tr>
+									<td class="rating-label">Excellent</td>
+									<td class="rating-bar">
+										<div class="bar-container">
+									      <div class="bar-5"></div>
+									    </div>
+									</td>
+									<td class="text-right">{{ product.excellent}}</td>
+								</tr>
+								<tr>
+									<td class="rating-label">Bien</td>
+									<td class="rating-bar">
+										<div class="bar-container">
+									      <div class="bar-4"></div>
+									    </div>
+									</td>
+									<td class="text-right">{{ product.bien}}</td>
+								</tr>
+								<tr>
+									<td class="rating-label">Moyen</td>
+									<td class="rating-bar">
+										<div class="bar-container">
+									      <div class="bar-3"></div>
+									    </div>
+									</td>
+									<td class="text-right">{{ product.moyen}}</td>
+								</tr>
+								<tr>
+									<td class="rating-label">Mauvais</td>
+									<td class="rating-bar">
+										<div class="bar-container">
+									      <div class="bar-2"></div>
+									    </div>
+									</td>
+									<td class="text-right">{{ product.mauvais}}</td>
+								</tr>
+								<tr>
+									<td class="rating-label">Terrible</td>
+									<td class="rating-bar">
+										<div class="bar-container">
+									      <div class="bar-1"></div>
+									    </div>
+									</td>
+									<td class="text-right">{{ product.terrible}}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+      
+      <hr>
+      
+			<div class="card">
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="">
+						<img class="profile-pic" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png">
+					</div>
+					<div class="d-flex flex-column">
+						<h3 class="mb-0">{{ product.clientIdentite }}</h3>
+						<div>
+							<p class="text-left"><span class="text-muted">{{ product.noteClient }}</span>
+							<span class="bi bi-star-fill star-inactive ml-3"></span>
+							<span class="bi bi-star-fill star-inactive"></span>
+							<span class="bi bi-star-fill star-inactive"></span>
+							<span class="bi bi-star-fill star-inactive"></span>
+							<span class="bi bi-star-fill star-inactive"></span></p>
+						</div>
+					</div>
+					<div class="ml-auto">
+						<p class="text-muted pt-5 pt-sm-3">{{ product.dateAvis }}</p>
+					</div>
+				</div>
+        
+				<div class="row text-start">
+					<h4 class="blue-text mt-5">{{ product.titreAvis }}</h4>
+					<p class="content">{{ product.avisClient }}</p>
+				</div>
+				<div class="d-flex justify-content-start">
+					<img class="pic" src="{{asset(product.photoClient)}}">
+					<img class="pic" src="{{asset(product.photoClient2)}}">
+				</div>
+				<div class="d-flex justify-content-center mt-4">
+					<div class="like mr-3 vote">
+						<img src="https://i.imgur.com/mHSQOaX.png"><span id="my-button" class="blue-text pl-2" >0</span>
+					</div>
+					<div class="unlike vote">
+						<img src="https://i.imgur.com/bFBO3J7.png"><span id="my-button2" class="text-muted pl-2">0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+  
+  
+</div>
+
+    {# <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> #}
+
+
+{% endblock %}

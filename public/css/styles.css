@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* couleur du body */
+body {
+    background-color: #F5F2ED !important;
+    font-family: 'Abel', sans-serif;
+}
+
+/* css barre de navigation avec le logo, barre de recherche et icônes */
+.navbar {
+    background-color: #0F056B;
+    height: 70px;
+    margin-bottom: -15px;
+  }
+  
+  .input-group .btn {
+    background-color: #D0AAF3;
+    border-color: #D0AAF3;
+    color: #fff;
+  }
+  
+  ul i {
+    color: white;
+    font-size: 30px; 
+  }
+
+  input {
+    border: none;
+  }
+
+  .bg-white {
+    --bs-bg-opacity: 1;
+    background-color: #fff! important;
+    width: 100%;
+    height: 50px;
+  }
+/* fin css  */
+
+/* css partie css */
+
+  #newsletter {
+    background-color: #0F056B;
+    color: #fff;
+    height: 150px; 
+  }
+  
+    .input-group .btn {
+      background-color: #D0AAF3;
+      border-color: #D0AAF3;
+      color: #fff;
+      font-weight: bold;
+      height: 30px;
+      font-size: 12px;
+    }
+  
+  input {
+      border: none;
+      height: 30px;
+    }
+  
+  .text-uppercase {
+    color: #0F056B;
+  }
+
+/* footer css */
+  
+  .footer {
+    color: black;
+
+  }
+  
+  .reseau {
+    color: #318CE7;
+    font-size: 30px; 
+  }
+  
+  p a {
+    text-decoration: none;
+  }
+
+  #barre{
+    height:35px;
+    width:0.1%;
+    background-color:black;
+    margin-top: 3px;
+    padding-right: 2px;
+ }
+/* carousel */
+
+ #carouselExampleIndicators {
+    margin: auto;
+    width: 87%;
+    margin-bottom: 2.8%;
+    margin-top: 1.8%;
+}
+
+.carousel-inner {
+  height: 30em;
+}
+
+/* bouton carroussel next et prev */
+.carousel-control-prev-icon {
+  margin-right: 170px;
+}
+
+.carousel-control-next-icon {
+  margin-left: 170px;
+}
+
+/* bouton carroussel */
+  .carousel-indicators button {
+    position: relative;
+    
+}
+
+/* img bordure arrondie */
+#carouselExampleIndicators img {
+    border-radius: 10px;
+}
+
+.bi-search {
+    width: 20%;
+}
+
+/* css banderolle bleu en dessous du premier carroussel page d'accueil */
+
+#banderolle {
+    background-color: #0F056B;
+    color: #fff;
+    width: 180rem;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: -30px;
+    margin-bottom: 3%;
+  }
+  
+  /* css barre horizontale */
+
+  .barreblanche {
+      border-left: 1px solid #fff;
+      padding-left: 5px;
+      margin-left: 5px;
+      height: 60px;
+      margin-top: 10px;
+  }
+
+  /* css paragraphe intérieur bandeau bleu sous premier carrousel */
+  
+  #banderolle .banderolle-bleu {
+    font-size: 13px;
+    margin-top: -10px;
+  }
+
+  /* css titre intérieur bandeau bleu sous premier carrousel */
+  
+  #banderolle h5 {
+     margin-top: 10px;
+  }
+
+  /* css flèches  */
+
+  .carousel-control-prev-icon {
+    margin-right: 100px;
+}
+
+.carousel-control-next-icon {
+    margin-left: 100px;
+}
+
+  /* css taille emoticone à l'intérieur du bandeau bleu sous le premier carrousel */
+  
+  .emoticone i {
+    font-size: 50px;
+  }
+
+  /* marques */
+
+  #marques {
+    max-width: 1060px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+  }
+
+  #marques_photo {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    border-radius: 2%;
+ }
+
+ #marques_photo img {
+    border-style: none;
+    border-radius: 2%;
+    -webkit-box-shadow: 0 0 10px grey;
+    box-shadow: 0 0 10px grey;
+ }
+
+ #marques h5 {
+  font-weight: bold;
+  margin-top: 20px;
+ }
+
+ #marques input {
+  background-color: #D0AAF3;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  width: 110px;
+  height: 25px;
+ }
+
+  /* fin CSS marques */
+
+  /* css section promotion */
+
+  #promo h4 {
+  font-weight: bold;
+  }
+  
+  #promo .card {
+   margin-top: 50px;
+   margin-bottom: 70px;
+   width: 19%;
+   height: 320px;
+   border-radius: 2%;
+   -webkit-box-shadow: 0 0 10px grey;
+   box-shadow: 0 0 10px grey;
+   border: none;
+  }
+
+  #promo {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1330px;
+  margin: auto;
+  
+  }
+
+  #promo h1 {
+    font-weight: bold;
+    font-size: 60px;
+  }
+  
+  #promo p {
+    max-width: 110px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 155px;
+  
+  }
+  
+  #promo a  {
+    background-color: #D0AAF3;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100px;
+    height: 45px;
+    margin-top: 235px;
+    margin-left: 120px;
+    padding-top: 18px;
+    border-style: none;
+    line-height: 12px;
+  }
+
+ .h5 .titre-menu {
+    font-weight: bold;  
+    width: 100%;
+    height: 20px;
+    max-width: 1300px;
+    margin: auto;
+    margin-bottom: -30px;
+  }
+  
+

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Le Distibuteur 2.0 - Accueil{% endblock %}</title>
+        <link rel="icon" href="images/logo/logoicone.png">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        
+        <!-- link Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+        <!-- link font google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+        <!-- link css nav et footer -->
+        <link rel="stylesheet" href="css/styles.css">
+        {% block stylesheets %}{% endblock %}
+         
+       
+    </head>
+    <body>
+   
+        <!-- barre de navigation -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark ">
+          
+    <!-- photo logo -->
+    <a class="navbar-brand ms-5" href="#"><img src="images/logo/logoledistributeur.png" width="70%" alt="logo"></a>
+             
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="input-group mx-auto my-2 d-flex justify-content-center">
+            <input class="col-5 rounded-start" type="search" class="form-control rounded" aria-describedby="search-addon" />
+            <button class="btn btn-primary my-2 my-sm-0 col-1" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><i class="bi bi-person p-2"></i></a>
+            </li>
+          
+          <li class="nav-item active">
+                <a class="nav-link" href="#"><i class="bi bi-heart p-2"></i></a>
+            </li>
+          
+          <li class="nav-item active">
+                <a class="nav-link me-5" href="#"><i class="bi bi-bag-dash p-2"></i></a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+      
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarCenteredExample"
+      aria-controls="navbarCenteredExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarCenteredExample"
+    >
+      <!-- Left links -->
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <!-- Navbar dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+            >Disabled</a
+          >
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white mt-3">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarCenteredExample"
+      aria-controls="navbarCenteredExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+      <!-- Left links -->
+      <div class="mySidenav">
+      
+      </div>
+
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#"><img src="images/logo/gabon.png" width="30px" height="20px" alt=""> VILLAGE ARTISANAL</a>
+        </li>
+        
+        <div id="barre"></div>
+        
+        <a class="nav-link active pe-4" aria-current="page" href="#">ELECTROMENAGER</a>
+        </li>
+      
+      <a class="nav-link active px-4" aria-current="page" href="#">SPORT</a>
+        </li>
+    
+    <a class="nav-link active px-4" aria-current="page" href="#">TELEPHONE</a>
+        </li>
+  
+  <a class="nav-link active px-4" aria-current="page" href="#">BEAUTE</a>
+        </li>
+    
+    <a class="nav-link active px-4" aria-current="page" href="#">ALIMENTATION</a>
+        </li>
+  
+  <a class="nav-link active px-4" aria-current="page" href="#">MODE</a>
+        </li>
+
+  <a class="nav-link active px-4" aria-current="page" href="#">LES MARQUES</a>
+        </li>
+       
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+
+{% block body %}
+{% endblock %}
+
+    </head>
+   <!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+  <!-- Section: Social media -->
+  <section class="">
+  
+    <!-- newsletter -->
+    <div id="newsletter" class="text-center p-2" >
+      <h4>Abonnez-vous à la newsletter!</h4>
+      <p>Ne ratez aucune de nos offres spéciales et recevez les dans votre mail</p>
+      
+      <form class="input-group mx-auto my-2 d-flex justify-content-center">
+            <input class="col-3 rounded-start" type="search" class="form-control rounded" aria-describedby="search-addon" />
+            <button class="btn btn-primary my-2 my-sm-0 col-1" type="submit">S'INSCRIRE</button>
+        </form>
+  </div>
+   
+    <!-- Right -->
+  </section>
+
+
+  <!-- Section: Links  -->
+  <section class="footer">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Notre entreprise
+          </h6>
+           <p>
+            <a href="#!" class="text-reset">A propos</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Conditions générales de ventes - CGV</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Conditions générales d'utilisation - CGU</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Politique de confidentialité</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Ouvrir un compre client</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Devenir vendeur</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Service livraison</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">FAQ - Questions fréquentes</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Adresse</h6>
+          <p>Marché de Louis</p>
+          <p>Libreville, Gabon</p>
+          <p>077 33 14 57</p>
+          <p>contact@ledistributeur.market</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Nos moyens de paiement
+          </h6>
+           
+        </div>
+        <!-- Grid column -->
+
+        
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Nos partenaires de livraison
+          </h6>
+          <img src="images/logo/logosecondaire.png.svg" alt="">
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Nous suivre sur les réseaux</h6>
+          <a><i class="bi bi-facebook" class="reseau"></i></a>
+          <a><i class="bi bi-instagram  px-4" class="reseau"></i></a>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: #0F056B; color: #fff;">
+    © 2021 Copyright: Le Distributeur 2.0. Tous droits réservés.
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+ 
+
+    <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        
+    </body>
+</html>
+

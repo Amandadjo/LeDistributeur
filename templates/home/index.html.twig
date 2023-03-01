@@ -1,0 +1,783 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Le Distibuteur 2.0 - Accueil{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+
+<!-- carousel -->
+
+ <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="http://127.0.0.1:8000/images/bannieres/banniere.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="http://127.0.0.1:8000/images/bannieres/banniere.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="http://127.0.0.1:8000/images/bannieres/banniere.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+ <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+{# bandeau bleu en dessous du carrousel principal #}
+<div class="container" id="banderolle">
+    
+    <div class="emoticone"><i class="bi bi-truck"></i></div>
+    
+    <div >
+      
+      <h5>LIVRAISON RAPIDE</h5>
+      <p class="banderolle-bleu">Sur l'ensemble du Grand Libreville et</br>
+        Port-Gentil  
+    </p> 
+    </div>
+    
+    <div class="barreblanche"></div>
+    
+    <div class="emoticone"><i class="bi bi-shield-fill-check"></i></div>
+    
+    <div>
+      <h5>PAIEMENT SÉCURISÉ</h5>
+      <p class="banderolle-bleu">Payez par Airtel Money, Moov Money</br>
+        et Paypal en toute sécurité</p>
+    </div>
+    
+    <div class="barreblanche"></div>
+    
+    <div class="emoticone"><i class="bi bi-telephone-outbound"></i></div>
+    
+    <div>
+</div>
+    <div>
+      <h5>SERVICE CLIENT</h5>
+        <p class="banderolle-bleu">Profitez de notre support 7j/7</p>
+    </div>
+  </div>
+
+
+{# section marques artisanles #}
+<div class="h5">
+  <h4 class="titre-menu">Marchés artisanaux</h4>
+  </div>
+<div class="container mt-4">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+<div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/1.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/2.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/3.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+    
+ <div class="col">  
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/4.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+  </div>
+</div>
+
+
+<div class="container mt-4">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+<div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/5.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/6.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/7.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+    
+ <div class="col">  
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/8.png" class="card-img" alt="...">
+  <div class="middle">
+   <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container mt-4 mb-5">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+<div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/11.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/10.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/12.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+    
+ <div class="col">  
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/9.png" class="card-img" alt="...">
+  <div class="middle">
+   <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+
+  </div>
+</div>
+
+{# section nouveauté #}
+<div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+
+          <div class="cars-cards">
+
+<div class="h5">
+  <h4 class="titre-menu">Nos nouveaux produits</h4>
+</div>
+<div class="container" id="promo">
+  {% for nouveaute in nouveautes %}
+  
+  <div class="card img-fluid" >
+    <img class="card-img-top" src="{{ asset(nouveaute.images) }}" height="100%" alt="Card image"  >
+    <div class="card-img-overlay">
+      
+      <a href="#" class="btn btn-primary">JE FONCE</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+</div>
+</div>
+{# fin de section #}
+
+
+{# section nouvelles boutiques #}
+
+<div class="h5">
+  <h4 class="titre-menu">Nouvelles boutiques</h4>
+  </div>
+<div class="container mt-4">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+<div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/1.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/2.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/3.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+    
+ <div class="col">  
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/4.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+<div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/5.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/6.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/7.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+    
+ <div class="col">  
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/8.png" class="card-img" alt="...">
+  <div class="middle">
+   <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container mt-4 mb-5">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+<div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/9.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/10.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/11.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+    
+ <div class="col">  
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/nouvelleboutique/12.png" class="card-img" alt="...">
+  <div class="middle">
+   <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+
+  </div>
+</div>
+
+{# Section promotion #}
+  {# <div id="fond-gris"> #}
+  <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+
+          <div class="cars-cards">
+
+ <div class="h5">
+  <h4 class="titre-menu">Le Top de nos vendeurs</h4>
+  </div>
+ <div class="container" id="promo">
+ {# {{ dump(promotion_categories) }}  #}
+   {% for top_vente in top_ventes %}
+  
+  <div class="card img-fluid" >
+    <img class="card-img-top" src="{{ asset(top_vente.images) }}" height="100%" alt="Card image"  >
+    <div class="card-img-overlay">
+     {# <h1 class="card-title">{{promotion_categorie.titre}}</h1>
+      <p class="card-text">{{promotion_categorie.description}}</p> #}
+      <a href="#" class="btn btn-primary">JE FONCE</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+</div>
+</div>
+
+
+{# section marques artisanles #}
+
+<div class="h5">
+  <h4 class="titre-menu">Nos boutiques partenaires à la une</h4>
+  </div>
+<div class="container mt-4">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+<div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/partenaire/25.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/partenaire/26.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/partenaire/27.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+    
+ <div class="col">  
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/partenaire/28.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+<div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/partenaire/29.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/partenaire/30.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/partenaire/31.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+    
+ <div class="col">  
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/partenaire/32.png" class="card-img" alt="...">
+  <div class="middle">
+   <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container mt-4 mb-5">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+<div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/partenaire/33.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/6.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+  
+    <div class="col">
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/7.png" class="card-img" alt="...">
+  <div class="middle">
+    <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+    
+ <div class="col">  
+  <div class="card bg-dark text-white" style="width: 20rem; height:10rem; border:none;">
+  <img src="images/artisanale/8.png" class="card-img" alt="...">
+  <div class="middle">
+   <a href="">
+      <div class="text">VOIR</div>
+     </div>
+    </a>
+</div>
+    </div>
+
+  </div>
+</div>
+
+{# Section promotion #}
+  {# <div id="fond-gris"> #}
+  <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+
+          <div class="cars-cards">
+ <div class="h5">
+  <h4 class="titre-menu"><b>Promotions</b> jusqu'à -70%</h4>
+  </div>
+ <div class="container" id="promo">
+ {# {{ dump(promotion_categories) }}  #}
+  {% for promotion_categorie in promotion_categories %}
+  
+  <div class="card img-fluid" >
+    <img class="card-img-top" src="{{ asset(promotion_categorie.images) }}" height="100%" alt="Card image"  >
+    <div class="card-img-overlay">
+     {# <h1 class="card-title">{{promotion_categorie.titre}}</h1> #}
+     {# <p class="card-text">{{promotion_categorie.description}}</p> #}
+     {# <a href="" class="btn btn-success">Jusqu'à {{promotion_categorie.titre}}</a> #}
+      
+      <a href="#" class="btn btn-primary">JE FONCE</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{# </div> #}
+</div>
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+</div>
+</div>
+
+{# fin section promotion #}
+
+
+{# Ancien design code #}
+
+  {# carrousel 1 avec barre de défilement
+
+<h5 class="titre-marche">Marché artisanal</h5> 
+<p id="sous-titre">Retrouve tous les produits locaux - 100% made in Gabon</p>
+<a href="#" class="position-relative" style="left: 29.5%" class="btn btn-primary">VOIR TOUS LES PRODUITS</a>
+
+<div class="container" id="container-2">
+ {% for marche_artisanal in marche_artisanals %}
+
+  <div class="carousel-2 scrollbar-colored">
+    
+    <div class="card img-fluid">
+    
+      <a href=""><img class="star" src="images/icone/etoile.png" width="6%" alt=""></a>
+      
+      
+      <img class="images_carousel_barre" src="{{asset(marche_artisanal.images)}}" width="60%" alt="Card">
+      <h6 class="categorie">{{marche_artisanal.categorie}}</h6>
+      <hr>
+      <a href=""><img class="bag" src="images/icone/bag.png" width="15%" alt=""></a>
+      <p class="description">{{marche_artisanal.description}}</p>
+      <p class="prix">{{marche_artisanal.prix}} CFA</p>
+    
+    </div>
+
+  </div>
+  {% endfor %}
+</div> #}
+
+<!-- second carrousel avec barre de défilement -->
+{# <div id="fond-gris">
+  <h5 class="titre-marche">Top ventes</h5> 
+  <a href="#" class="position-relative" style="left: 29.5%" class="btn btn-primary">VOIR TOUS LES PRODUITS</a>
+
+  <div class="container" id="container-2">
+ {% for top_vente in top_ventes %}
+
+  <div class="carousel-2 scrollbar-colored">
+    
+    <div class="card img-fluid">
+    
+      <a href=""><img class="star" src="images/icone/etoile.png" width="6%" alt=""></a>
+      
+      
+      <img class="images_carousel_barre" src="{{asset(top_vente.images)}}" width="60%" alt="Card">
+      <h6 class="categorie">{{top_vente.categorie}}</h6>
+      <hr>
+      <a href=""><img class="bag" src="images/icone/bag.png" width="15%" alt=""></a>
+      <p class="description">{{top_vente.description}}</p>
+      <p class="prix">{{top_vente.prix}} CFA</p>
+    
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+</div> #}
+
+<!-- troisième carousel avec barre de défilement -->
+{# <h5 class="titre-marche">Nos idées cadeaux</h5> 
+
+<a href="#" class="position-relative" style="left: 29.5%" class="btn btn-primary">VOIR TOUS LES PRODUITS</a>
+
+<div class="container" id="container-2">
+ {% for idees_cadeaux in idees_cadeaux %}
+
+  <div class="carousel-2 scrollbar-colored">
+    
+    <div class="card img-fluid">
+    
+      <a href=""><img class="star" src="images/icone/etoile.png" width="6%" alt=""></a>
+      
+      
+      <img class="images_carousel_barre" src="{{asset(idees_cadeaux.images)}}" width="60%" alt="Card">
+      <h6 class="categorie">{{idees_cadeaux.categorie}}</h6>
+      <hr>
+      <a href=""><img class="bag" src="images/icone/bag.png" width="15%" alt=""></a>
+      <p class="description">{{idees_cadeaux.description}}</p>
+      <p class="prix">{{idees_cadeaux.prix}} CFA</p>
+      
+    </div>
+
+  </div>
+   
+  {% endfor %}
+</div>
+
+
+ #}
+
+
+{# Marques #}
+  {# <div id="marques">
+  <h5>Marques</h5>
+  <input type="button" value="DECOUVRIR">
+  </div>
+
+ <div id="marques_photo">
+
+   <div >
+     <a href=""><img src="images/logo/1.png" width="150px" height="150px" alt=""></a>
+   </div>
+
+   <div>
+     <a href=""><img src="images/logo/6.png" width="150px" height="150" alt=""></a>
+   </div>
+   <div>
+    <a href=""><img src="images/logo/2.png" width="150" height="150" alt=""></a>
+   </div>
+    
+    <div>
+     <a href=""><img src="images/logo/3.png" width="150" height="150" alt=""></a>
+    </div>
+
+   <div>
+     <a href=""><img src="images/logo/5.png" width="150" height="150" alt=""></a>
+   </div> 
+
+   <div>
+     <a href=""><img src="images/logo/4.png" width="150" height="150px" alt=""></a>
+   </div>
+   
+  </div> #}
+
+
+{% endblock %}
