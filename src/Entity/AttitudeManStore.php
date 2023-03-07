@@ -60,7 +60,7 @@ class AttitudeManStore
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $descriptionLongues;
+    private $descriptionLongue;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -293,14 +293,14 @@ class AttitudeManStore
         return $this;
     }
 
-    public function getDescriptionLongues(): ?string
+    public function getDescriptionLongue(): ?string
     {
-        return $this->descriptionLongues;
+        return $this->descriptionLongue;
     }
 
-    public function setDescriptionLongues(?string $descriptionLongues): self
+    public function setDescriptionLongue(?string $descriptionLongue): self
     {
-        $this->descriptionLongues = $descriptionLongues;
+        $this->descriptionLongue = $descriptionLongue;
 
         return $this;
     }
