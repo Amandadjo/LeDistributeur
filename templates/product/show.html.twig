@@ -1,0 +1,123 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{product.titreArticle}} - Le Distributeur{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/stylesdetailcard.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5 mb-5">	
+  <div class="card">	
+    <div class="row g-0">	
+      <div class="col-md-6 border-end">	
+        <div class="d-flex flex-column justify-content-center">	
+          <div class="main_image">
+            <div id="largeImgPanel" onclick="this.style.display='none'">
+              <img id="largeImg">
+            </div>
+            <img src="../images/product/{{ product.image }}" id="main_product_image" class="img-fluid"  width="350" onclick="showImage(this.src, 'https://ledistributeur.market/wp-content/uploads/2022/06/che-6.png');">	
+          </div>	
+          <div class="thumbnail_images">	
+            <ul id="thumbnail">	
+              <li><img onclick="changeImage(this)" src="../images/product/{{ product.image }}" width="70"></li>	
+              <li><img onclick="changeImage(this)" src="../images/product/{{ product.image }}" width="70"></li>	
+            </ul>	
+          </div>	
+        </div>	
+      </div>	
+      <div class="col-md-6">	
+        <div class="p-3 right-side">	
+          <div class="d-flex justify-content-between align-items-center">	
+            <h3 class="mt-3">{{ product.titreArticle }}<span> ({{ product.discount }})</span></h3>	
+            <span class="heart">
+              <a href=""><i class="bi bi-heart-fill"></i></a>
+            </span>	
+          </div>
+          
+          <div class="ratings d-flex flex-row align-items-center">	
+            <div class="d-flex flex-row">	
+              <i class="bi bi-star-fill star-inactive"></i>
+              <i class="bi bi-star-fill star-inactive"></i>
+              <i class="bi bi-star-fill star-inactive"></i>
+              <i class="bi bi-star-fill star-inactive"></i>
+              <i class="bi bi-star-fill star-inactive"></i>
+            </div>	
+            {# <span class="">{{ product.evaluation}} évaluations</span>	 #}
+          </div>	
+          
+          <div class="mt-4 mb-5">	
+          <h5>Vendu par <a href="">{{ product.nomBoutique }}</a></h5>	
+          </div>
+          <div class="mb-4 ">	
+          <PRE style="font-size:20px;">{{ product.descriptionLongue}}</PRE>
+          </div>	
+          {# <div class="sizes mt-5 mb-4">
+             <h6 class="text-uppercase">Taille:</h6> 
+            <label class="radio"> 
+              <input type="radio" name="size" value="38" checked>              
+              <span>{{ product.taille1}}</span> 
+            </label> 
+            <label class="radio"> 
+              <input type="radio" name="size" value="39"> 
+              <span>{{ product.taille2}}</span> 
+            </label> 
+            <label class="radio"> 
+              <input type="radio" name="size" value="40"> 
+              <span>{{ product.taille3}}</span> 
+            </label> 
+            <label class="radio"> 
+              <input type="radio" name="size" value="41"> 
+              <span>{{ product.taille4}}</span> 
+            </label> 
+            <label class="radio"> 
+              <input type="radio" name="size" value="L"> 
+              <span>{{ product.taille5}}</span> 
+            </label>
+            <label class="radio"> 
+              <input type="radio" name="size" value="M"> 
+              <span>{{ product.taille6}}</span> 
+            </label>
+            <label class="radio"> 
+              <input type="radio" name="size" value="M"> 
+              <span>{{ product.taille7}}</span> 
+            </label>
+            <label class="radio"> 
+              <input type="radio" name="size" value="M"> 
+              <span>{{ product.taille8}}</span> 
+            </label>
+            <label class="radio"> 
+              <input type="radio" name="size" value="M"> 
+              <span>{{ product.taille9}}</span> 
+            </label>
+            <label class="radio"> 
+              <input type="radio" name="size" value="M"> 
+              <span>{{ product.taille10}}</span> 
+            </label>
+          </div> #}
+          <div class="price">
+          <span>{{ (product.prix / 100) | number_format(2, ',', '.') }} FCA</span>	
+          {# <sup><strike>{{ product.prixBefore}}</strike></sup> #}
+          </div>
+          <div class="buttons d-flex flex-row mt-4 gap-3">	
+           <a href="{{ path('add_to_cart', { 'id' :product.id}) }}" class="btn">Ajouter au panier</a>	
+          </div>	
+     
+        </div>	
+      </div>	
+    </div>	
+  </div>   
+  
+  <!--  section description détaillé  -->
+  
+  <div class="mt-5">
+    <h2 class="mb-4">Description du produit</h2>
+    
+    {{ product.descriptionLongue}}
+  </div> 
+  
+  <div class="hr mb-2">
+  <hr>
+  </div> 
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon panier - Le Distributeur{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5 mb-5">	
+    
+    <h1>Mon panier</h1>
+
+Retrouvez l'ensemble des produits que vous avez ajouté à votre panier.
+
+{% if cart|length > 0 %}
+
+    <table class="table mt-3">
+        <thead>
+        <tr>
+            <th scope="col">Produit</th>
+            <th scope="col"></th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Total</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% set total = null %}
+        {% for product in cart %}
+
+            <tr>
+            <th>
+                    <img src="/images/product/{{ product.product.image }}" alt="{{ product.product.titreArticle }}" height="200px"><br>
+            </th>
+            <td>{{ product.product.titreArticle }}</td>
+            <td>
+                <a href="{{ path('decrease_to_cart', {'id': product.product.id})}}">
+                    <img src="{{ asset('/images/panier/minus.png') }}" height="8px" alt="Retirer un produit">
+                </a>
+
+                x {{ product.quantity }}
+
+                <a href="{{ path('add_to_cart', {'id': product.product.id})}}">
+                    <img src="{{ asset('/images/panier/add.png') }}" height="8px" alt="Ajouter un produit supplémentaire">
+                </a>
+            </td>
+            <td>{{ (product.product.prix / 100) | number_format(2, ',', '.') }} FCA</td>
+            <td>{{ ((product.product.prix / 100 * product.quantity) /100) | number_format(2, ',', '.') }} FCA</td>
+            <td>
+                <a href="{{ path('delete_to_cart', {'id': product.product.id})}}">
+                    <img src="{{ asset('/images/panier/delete.png') }}" height="18px" alt="Supprimer mon produit">
+                </a>
+            </td>
+            </tr>
+                {% set total = total + (product.product.prix / 100 * product.quantity) %}
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="text-right">
+        <b class="text-right">Nombre de produit:</b> {{ cart|length }}
+        <p><b>Total de mon panier:</b> {{ ( total /100) | number_format(2, ',', '.') }} FCA</p>
+        <a href="" class="btn btn-success btn-block">Valider mon panier</a>
+    </div>
+    </div>
+{% else %}
+    <hr>
+    <p><b>Votre panier est vide</b></p>
+{% endif %}
+{% endblock %}

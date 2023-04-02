@@ -10,6 +10,7 @@ use App\Entity\TopVente;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
@@ -17,7 +18,7 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="app_home")
      */
-    public function index(ManagerRegistry $doctrine): Response
+    public function index(ManagerRegistry $doctrine, SessionInterface $session): Response
     {
         $promotion_categories = $doctrine->getRepository(PromotionCategories::class)->findAll();
         $marche_artisanal = $doctrine->getRepository(MarcheArtisanal::class)->findAll();
@@ -33,5 +34,7 @@ class HomeController extends AbstractController
             'nouveautes' => $nouveaute
         ]);
     }
+
+    
 
 }

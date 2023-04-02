@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AttitudeManStoreController extends AbstractController
 {
     /**
-     * @Route("/attitudemanstore", name="app_attitudemanstore")
+     * @Route("/attitude-man-store", name="app_attitudemanstore")
      */
     public function index(ManagerRegistry $doctrine): Response
     {

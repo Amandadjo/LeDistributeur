@@ -5,15 +5,13 @@ namespace App\Controller\Admin;
 use App\Entity\Product;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField as FieldCollectionField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField as FieldMoneyField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField as FieldSlugField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField as FieldTextareaField;
-use Symfony\Component\Form\Extension\Core\Type\TextareaField;
-use Symfony\Component\Form\Extension\Core\Type\MoneyField;
-use Symfony\Component\Form\Extension\Core\Type\SlugField;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class ProductCrudController extends AbstractCrudController
 {
@@ -31,10 +29,14 @@ class ProductCrudController extends AbstractCrudController
             TextField::new('discount'),
             FieldMoneyField::new('prix')->setCurrency('XAF'),
             FieldMoneyField::new('prixBefore')->setCurrency('XAF'),
-            ImageField::new('photo')->setBasePath('uploads/')->setUploadDir('uploads/')->setUploadedFileNamePattern(''),
+            ImageField::new('image')
+            ->setBasePath('images/product')
+            ->setUploadDir('public/images/product')
+            ->setUploadedFileNamePattern('[randomhash].[extension]')
+            ->setRequired(false),
             TextField::new('descriptionCourte'),
             FieldTextareaField::new('descriptionLongue'),
-            AssociationField::new('category')
+            AssociationField::new('category'),
         ];
     }
    

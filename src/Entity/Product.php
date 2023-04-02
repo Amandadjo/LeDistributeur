@@ -6,9 +6,14 @@ use App\Repository\ProductRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
+ * @vich\Uploadable
  */
 class Product
 {
@@ -37,12 +42,18 @@ class Product
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $photo;
+    private $image;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $photoDetail;
+    private $imageDetail;
+
+    /**
+     * @Vich\UploadableField(mapping="product", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile; 
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -73,6 +84,8 @@ class Product
      * @ORM\Column(type="float", nullable=true)
      */
     private $prixBefore;
+
+
 
     public function __construct()
     {
@@ -120,26 +133,26 @@ class Product
         return $this;
     }
 
-    public function getPhoto(): ?string
+    // public function getImage(): ?string
+    // {
+    //     return $this->image;
+    // }
+
+    // public function setImage(string $image): self
+    // {
+    //     $this->image = $image;
+
+    //     return $this;
+    // }
+
+    public function getImageDetail(): ?string
     {
-        return $this->photo;
+        return $this->imageDetail;
     }
 
-    public function setPhoto(string $photo): self
+    public function setImageDetail(?string $imageDetail): self
     {
-        $this->photo = $photo;
-
-        return $this;
-    }
-
-    public function getPhotoDetail(): ?string
-    {
-        return $this->photoDetail;
-    }
-
-    public function setPhotoDetail(?string $photoDetail): self
-    {
-        $this->photoDetail = $photoDetail;
+        $this->imageDetail = $imageDetail;
 
         return $this;
     }
@@ -227,4 +240,39 @@ class Product
 
         return $this;
     }
+
+    /**
+     * @return string|null
+     */
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    /**
+     * @return string|null $image
+     * @return $this 
+     */
+    public function setImage(?string $image):self
+    {
+            $this->image = $image;
+            return $this;
+    }
+
+    /**
+     * @return File|null 
+     */
+    public function getImageFile(): ?File
+    {
+            return $this->imageFile;
+    }
+
+    /**
+     * @return File|null $imageFile
+     */
+    public function setImageFile(?File $imageFile = null)
+    {
+            $this->imageFile = $imageFile;
+    }
+
 }

@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class LaCoquineController extends AbstractController
 {
     /**
-     * @Route("/lacoquine", name="app_lacoquine")
+     * @Route("/la-coquine", name="app_lacoquine")
      */
     public function index(ManagerRegistry $doctrine): Response
     {
