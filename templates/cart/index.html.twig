@@ -58,7 +58,7 @@ Retrouvez l'ensemble des produits que vous avez ajouté à votre panier.
     <div class="text-right">
         <b class="text-right">Nombre de produit:</b> {{ cart|length }}
         <p><b>Total de mon panier:</b> {{ ( total /100) | number_format(2, ',', '.') }} FCA</p>
-        <a href="" class="btn btn-success btn-block">Valider mon panier</a>
+        <a href="{{ path('app_order') }}" class="btn btn-success btn-block">Valider mon panier</a>
     </div>
     </div>
 {% else %}
